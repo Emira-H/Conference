@@ -1,3 +1,6 @@
+import psycopg2
+import psycopg2.extras
+
 class Connection():
     """Class to manage the connection and the cursor to a database"""
     # Store the username, the port and the database name as class attributs
