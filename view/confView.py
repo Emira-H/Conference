@@ -8,7 +8,6 @@ class ConfView:
     def __init__(self):
         pass
 
-
     def add_conferencier(self):
         firstname = input("Veuillez ajouter le prénom du conférencier: ")
         name = input("Veuillez ajouter le nom du conférencier: ")
@@ -27,3 +26,4 @@ class ConfView:
                 print(conferencier)
         else:
             print("Aucun conférencier actif")
+o

@@ -1,4 +1,6 @@
-from view.confView import ConfView
+from view.conferenceView import ConferenceView
 
-conf = ConfView()
-conf.display_conferencier()
+conf = ConferenceView()
+conf.display_conference()
+#conf.add_conference()
+#conf.del_conference()
