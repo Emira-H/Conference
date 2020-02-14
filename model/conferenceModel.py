@@ -5,7 +5,6 @@ class ConferenceModel:
     def __init__(self):
         self.db = Connection()
 
-
     def add_conference(self,title, resume, date, hour, date_creation, id_conferencier):
         sql = """INSERT INTO conference (title, resume, date, hour, date_creation, id_conferencier) VALUES (%s, %s, %s, %s, %s, %s);"""
         arguments = (title, resume, date, hour, date_creation, id_conferencier)

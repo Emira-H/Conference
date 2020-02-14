@@ -1,9 +1,9 @@
 from model.connection import Connection
+from model.entities.hydrate_conferencier import HydraConferencier
 
 class ConferencierModel:
     def __init__(self):
         self.db = Connection()
-
 
     def add_conferencier(self,firstname, name, description, profession):
         sql = """INSERT INTO conferencier (firstname, name, description, profession) VALUES (%s, %s, %s, %s);"""
@@ -25,6 +25,8 @@ class ConferencierModel:
         sql = """SELECT * FROM conferencier WHERE statut_actif = True;"""
         self.db.initialize_connection()
         self.db.cursor.execute(sql)
-        actif_conferentiers = self.db.cursor.fetchall()
+        actif_conferenciers = self.db.cursor.fetchall()
+        for key, value in enumerate(actif_conferenciers):
+            actif_conferenciers[key]= HydraConferencier(value)
         self.db.close_connection()
-        return actif_conferentiers
+        return actif_conferenciers

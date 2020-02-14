@@ -13,7 +13,7 @@ class HydraConferencier:
                 setattr(self, key, value)
 
     def __str__(self):
-        return """-------------------\n \
+        return """----------------------------------------------------------------\n \
             id: {}\n \
             firstname: {} \n \
             name: {} \n \

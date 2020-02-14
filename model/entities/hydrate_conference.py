@@ -26,5 +26,4 @@ class HydraConference:
             self.date,
             self.hour,
             self.date_creation,
-            self.firstname + " " + self.name
-        )
+            self.firstname + " " + self.name)

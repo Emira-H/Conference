@@ -26,4 +26,3 @@ class ConfView:
                 print(conferencier)
         else:
             print("Aucun conférencier actif")
-o
