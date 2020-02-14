@@ -1,5 +1,5 @@
 from .hydrate_conferencier import HydraConferencier
-
+#class to hydrate the data from
 class HydraConference:
     def __init__(self, dico):
         self.id = None

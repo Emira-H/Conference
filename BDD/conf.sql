@@ -14,3 +14,6 @@ ADD CONSTRAINT fk_conf_id_conferencier
     FOREIGN KEY (id_conferencier)
     REFERENCES conferencier (id)
     ON DELETE CASCADE;
+
+ALTER TABLE conference
+ALTER COLUMN date_creation TYPE TIMESTAMP without time zone;
