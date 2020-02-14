@@ -24,4 +24,4 @@ class ConferenceView:
     def display_conference(self):
         liste_conferences = self.speech.display_conference()
         for conference in liste_conferences:
-            print(f"*********************************************************************************\n  {conference}")
+            print(conference)

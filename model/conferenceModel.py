@@ -1,5 +1,5 @@
 from model.connection import Connection
-
+from model.entities.hydrate_conference import HydraConference
 
 class ConferenceModel:
     def __init__(self):
@@ -30,4 +30,6 @@ class ConferenceModel:
         self.db.cursor.execute(sql)
         conferences = self.db.cursor.fetchall()
         self.db.close_connection()
+        for key, value in enumerate(conferences):
+            conferences[key]= HydraConference(value)
         return conferences
